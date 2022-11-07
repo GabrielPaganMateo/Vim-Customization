@@ -1,0 +1,44 @@
+  1 "When using VI improved, use it then, just a configuration when it should happen automatically 
+  2  
+  3 set nocompatible 
+  4  
+  5 " turn on line numbering. 
+  6 set number 
+  7  
+  8 " vim will flash instead of sounding a beep 
+  9 set visualbell errorbells ruler 
+ 10  
+ 11 " if filetype detection was not switched on yet, it will be (this is done automatically, but in case it fails) 
+ 12 filetype plugin indent on 
+ 13  
+ 14 " Enable mouse suppor in vim. The A stand for all modes and will allow the 
+ 15 " mouse to be used everywhere in vim 
+ 16 set mouse=v 
+ 17  
+ 18 "you can use set mouse=r or mouse=v for coping and pasting but the cursor wont 
+ 19 "move around the screen you will have to manually go down. 
+ 20  
+ 21 " Makes vim show all white spaces as a character 
+ 22 set list 
+ 23  
+ 24 " eol = the character to show at the end of each line, tab = the character 
+ 25 " used to show a tab and tairl = charcter to show for trailing spaces. 
+ 26 set listchars=eol:\ ,tab:\|\ ,trail:~ 
+ 27  
+ 28 " displaying status line always 
+ 29 " the advantage of having the status line displayes always, is you can see the current mode, file name, file status, ruler, etc. 
+ 30 set laststatus=2 
+ 31 set statusline+=%F "show absolute pathway of the file 
+ 32 set statusline+=%r 
+ 33 set statusline+=%m "if file have been modified flag [+] 
+ 34 set statusline+=%= "anything under this line on the status line will be on the right side 
+ 35 set statusline+=%y "show filetype of the file 
+ 36 set statusline+=\ %p%% "percentage throught the file 
+ 37 set statusline+=\ %l:%c "show line number:column number 
+ 38  
+ 39 " this command will always be executed when files extension matches 
+ 40 " when a c file is edited [noexpandtab = tabs intead of tabs, ts = tabstop the number of spaces that a tab equates to, sw = shiftwidth the number of spaces to use when identing or de-intending a line, sts =     softtabstop the numer of spaces to use when expanfing tabs 
+ 41 autocmd Filetype c set noexpandtab sw=4 ts=4 sts=4 
+ 42  
+ 43 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE 
+ 44 highlight NonText guifg=#4a4a59 guibg=#4a4a59 
