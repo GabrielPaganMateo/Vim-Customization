@@ -1,5 +1,5 @@
 # /VimHack
-## Configure your Vim for additional help
+## Configure your Vim for a more user friendly interface
 1. Fork this repository
 2. Clone this repository in your machine
 ### OR
