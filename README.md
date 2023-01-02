@@ -4,5 +4,5 @@
 2. Clone this repository in your machine
 ### OR
 1. Create a file named .vimrc 
-2. Copy & Paste 
-
+2. Copy code from "file name"
+3. Paste code into .vimrc file
